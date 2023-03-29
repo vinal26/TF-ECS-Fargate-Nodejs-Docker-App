@@ -125,10 +125,10 @@ jobs:
 #         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 #         run: terraform apply -auto-approve
 
-#       - name: Terraform Show
-#         working-directory: ./infra
-#         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-#         run: terraform show
+      - name: Terraform Show
+        working-directory: ./infra
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: terraform show
 
       - name: Terraform Destroy
         working-directory: ./infra
